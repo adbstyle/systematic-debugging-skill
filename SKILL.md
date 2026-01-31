@@ -53,9 +53,8 @@ You MUST complete each phase before proceeding to the next.
 
 **BEFORE attempting ANY fix:**
 
-**Triple-Agent Investigation (Recommended):**
-
-Spawn 3 agents in parallel using Task tool. Each performs the same complete investigation independently:
+> **MANDATORY:** Verwende das **Task-Tool** mit `subagent_type="general-purpose"` 
+> für diese 3 Agenten. Spawne alle 3 in **einem einzigen Message-Block** (parallel). Each performs the same complete investigation independently:
 
 1. **Read Error Messages Carefully**
    - Don't skip past errors or warnings
@@ -136,6 +135,11 @@ Spawn 3 agents in parallel using Task tool. Each performs the same complete inve
 ### Phase 2: Pattern Analysis
 
 **Find the pattern before fixing:**
+
+> **MANDATORY:** Verwende das **Task-Tool** mit
+> `subagent_type="systematic-debugging:pattern-analyzer"`
+> für diese 3 Agenten. Spawne alle 3 in **einem einzigen Message-Block** (parallel).
+> Each agent performs the same complete investigation independently:
 
 1. **Find Working Examples**
    - Locate similar working code in same codebase
