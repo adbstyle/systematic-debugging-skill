@@ -51,6 +51,10 @@ You MUST complete each phase before proceeding to the next.
 
 **BEFORE attempting ANY fix:**
 
+**Triple-Agent Investigation (Recommended):**
+
+Spawn 3 agents in parallel using Task tool. Each performs the same complete investigation independently:
+
 1. **Read Error Messages Carefully**
    - Don't skip past errors or warnings
    - They often contain the exact solution
@@ -118,6 +122,14 @@ You MUST complete each phase before proceeding to the next.
    - What called this with bad value?
    - Keep tracing up until you find the source
    - Fix at source, not at symptom
+
+   After all 3 agents complete (~60s):
+- Compare findings
+- 3/3 agree → High confidence (0.9+)
+- 2/3 agree → Medium confidence (0.7)
+- Disagreements → Review manually
+- Combine unique findings from all agents
+- Synthesize final root cause
 
 ### Phase 2: Pattern Analysis
 
