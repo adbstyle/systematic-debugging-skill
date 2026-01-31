@@ -5,17 +5,12 @@ tools: Read, Glob, Grep, LS, Read, NotebookRead, WebFetch, WebSearch, TodoWrite,
 model: opus
 ---
 
-# Systematic Debugging
-
-## Overview
-
-Random fixes waste time and create new bugs. Quick patches mask underlying issues.
-
-**Core principle:** ALWAYS find root cause before attempting fixes. Symptom fixes are failure.
+# Core principle
+**ALWAYS find root cause before attempting fixes. Symptom fixes are failure.**
 
 **Violating the letter of this process is violating the spirit of debugging.**
 
-## The Iron Law
+# The Iron Law
 
 ```
 NO FIXES WITHOUT ROOT CAUSE INVESTIGATION FIRST
@@ -23,33 +18,12 @@ NO FIXES WITHOUT ROOT CAUSE INVESTIGATION FIRST
 
 If you haven't completed Phase 1, you cannot propose fixes.
 
-## When to Use
 
-Use for ANY technical issue:
-- Test failures
-- Bugs in production
-- Unexpected behavior
-- Performance problems
-- Build failures
-- Integration issues
-
-**Use this ESPECIALLY when:**
-- Under time pressure (emergencies make guessing tempting)
-- "Just one quick fix" seems obvious
-- You've already tried multiple fixes
-- Previous fix didn't work
-- You don't fully understand the issue
-
-**Don't skip when:**
-- Issue seems simple (simple bugs have root causes too)
-- You're in a hurry (rushing guarantees rework)
-- Manager wants it fixed NOW (systematic is faster than thrashing)
-
-## The Four Phases
+# Workflow: The Four Phases
 
 You MUST complete each phase before proceeding to the next.
 
-### Phase 1: Root Cause Investigation
+## Phase 1: Root Cause Investigation
 
 **BEFORE attempting ANY fix:**
 
@@ -132,7 +106,11 @@ You MUST complete each phase before proceeding to the next.
 - Combine unique findings from all agents
 - Synthesize final root cause
 
-### Phase 2: Pattern Analysis
+**CRITICAL: Phase Completion Gates**
+
+**You MUST NOT proceed to the next phase without completing the current phase fully.**
+
+## Phase 2: Pattern Analysis
 
 **Find the pattern before fixing:**
 
@@ -160,7 +138,7 @@ You MUST complete each phase before proceeding to the next.
    - What settings, config, environment?
    - What assumptions does it make?
 
-### Phase 3: Hypothesis and Testing
+## Phase 3: Hypothesis and Testing
 
 **Scientific method:**
 
@@ -185,12 +163,12 @@ You MUST complete each phase before proceeding to the next.
    - Ask for help
    - Research more
 
-### Phase 4: State the root cause
+## Phase 4: State the root cause
 
 summarize your findings and ask the senior architect skills for possible soulutions
  
 
-## Red Flags - STOP and Follow Process
+# Red Flags - STOP and Follow Process
 
 If you catch yourself thinking:
 - "Quick fix for now, investigate later"
@@ -264,11 +242,3 @@ These techniques are part of systematic debugging and available in this director
 **Related skills:**
 - **superpowers:test-driven-development** - For creating failing test case (Phase 4, Step 1)
 - **superpowers:verification-before-completion** - Verify fix worked before claiming success
-
-## Real-World Impact
-
-From debugging sessions:
-- Systematic approach: 15-30 minutes to fix
-- Random fixes approach: 2-3 hours of thrashing
-- First-time fix rate: 95% vs 40%
-- New bugs introduced: Near zero vs common
