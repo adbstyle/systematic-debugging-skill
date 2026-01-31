@@ -1,6 +1,8 @@
 ---
 name: systematic-debugging
 description: Use when encountering any bug, test failure, or unexpected behavior, before proposing fixes
+tools: Read, Glob, Grep, LS, Read, NotebookRead, WebFetch, WebSearch, TodoWrite, WebSearch, BashOutput, Bash(curl -X GET*), Bash(curl --request GET*)
+model: opus
 ---
 
 # Systematic Debugging
