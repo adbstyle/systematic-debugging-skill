@@ -19,9 +19,48 @@ NO FIXES WITHOUT ROOT CAUSE INVESTIGATION FIRST
 If you haven't completed Phase 1, you cannot propose fixes.
 
 
-# Workflow: The Four Phases
+# Workflow: The Five Phases
 
 You MUST complete each phase before proceeding to the next.
+
+## Phase 0: Context Gathering (MANDATORY)
+
+**BEFORE investigating, ensure you understand the problem space.**
+
+> **STOP and ASK** if any of these are unclear. Use `AskUserQuestion` tool.
+
+### 1. Categorize the Problem Type
+
+| Type | Key Questions to Ask |
+|------|---------------------|
+| **Bug/Error** | What is the expected vs. actual behavior? Can you reproduce it? |
+| **Security** | Threat model? Internal or external attacker? What permissions do they have? |
+| **Performance** | What metric? What's acceptable? Where does it degrade? |
+| **Integration** | Which systems are involved? What are the boundaries? |
+
+### 2. Clarify Scope and Assumptions
+
+**Always ask yourself:**
+- What am I assuming that might be wrong?
+- What context is the user not telling me?
+- What would change my approach if I knew more?
+
+**For Security Analysis specifically:**
+- [ ] Who is the attacker? (Anonymous user, authenticated user, admin, insider?)
+- [ ] What permissions/access do they START with?
+- [ ] What is the target? (Data, privileges, availability?)
+- [ ] Internal network access or external only?
+- [ ] What's already been ruled out?
+
+### 3. Ask Clarifying Questions
+
+**Examples of good clarifying questions:**
+- "Welche Berechtigungen hat der User bereits?"
+- "Geht es um einen externen Angreifer oder einen authentifizierten User?"
+- "Was genau soll geschützt werden?"
+- "Gibt es bekannte Einschränkungen oder Annahmen?"
+
+**Red Flag:** If you're about to spawn 3 agents but can't clearly state the problem in one sentence → STOP and clarify first.
 
 ## Phase 1: Root Cause Investigation
 
